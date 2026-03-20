@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>YOUR SHOP | Modern Clothing Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LANGUAGE OVERLAY (popup on first visit) -->
+<div id="langOverlay" class="lang-overlay">
+    <div class="lang-card">
+        <h3 id="langTitle">CHOOSE LANGUAGE / ВЫБЕРИТЕ ЯЗЫК</h3>
+        <div class="lang-buttons">
+            <button id="selectEnglish" class="lang-btn primary-lang">ENGLISH</button>
+            <button id="selectRussian" class="lang-btn secondary-lang">РУССКИЙ</button>
+        </div>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="container header-container">
+        <div class="logo">
+            <a href="#">YOUR SHOP</a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><button class="nav-cat-btn active-cat" data-category="men" id="navMenBtn">MEN</button></li>
+                <li><button class="nav-cat-btn" data-category="women" id="navWomenBtn">WOMEN</button></li>
+                <li><button id="infoBtn" class="nav-info-btn"><i class="fas fa-info-circle"></i> <span id="infoBtnText">INFO</span></button></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count">0</span>
+        </div>
+    </div>
+</header>
+
+<!-- HERO with centered YOUR SHOP text -->
+<section class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title" id="heroTitleText">your shop</h1>
+        <div class="hero-sub" id="heroSubText">effortless style · daily wear</div>
+    </div>
+</section>
+
+<!-- PRODUCTS SECTION with category toggles -->
+<section class="products-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title" id="collectionTitle">latest collection</h2>
+            <div class="category-tags">
+                <button class="tag-btn active-tag" data-category="men" id="tagMenBtn">MEN</button>
+                <button class="tag-btn" data-category="women" id="tagWomenBtn">WOMEN</button>
+            </div>
+        </div>
+        <div id="productsGrid" class="products-grid"></div>
+    </div>
+</section>
+
+<!-- LOOKBOOK / people wearing clothes -->
+<section class="lookbook">
+    <div class="container">
+        <div class="lookbook-header">
+            <h2 id="lookbookTitle">street style</h2>
+            <p id="lookbookSub">as worn by real people</p>
+        </div>
+        <div class="lookbook-grid">
+            <div class="look-item">
+                <div class="look-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=600&h=800&fit=crop" alt="street style">
+                </div>
+                <div class="look-caption" id="lookCap1">Oversized hoodie · 3,290 ₽</div>
+            </div>
+            <div class="look-item">
+                <div class="look-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1524504389091-5c0da0d0c3f1?w=600&h=800&fit=crop" alt="street style">
+                </div>
+                <div class="look-caption" id="lookCap2">Cropped jacket · 3,790 ₽</div>
+            </div>
+            <div class="look-item">
+                <div class="look-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=800&fit=crop" alt="street style">
+                </div>
+                <div class="look-caption" id="lookCap3">Relaxed jeans · 2,990 ₽</div>
+            </div>
+            <div class="look-item">
+                <div class="look-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&h=800&fit=crop" alt="street style">
+                </div>
+                <div class="look-caption" id="lookCap4">Varsity bomber · 3,990 ₽</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- INFO MODAL (Adam story + translate button) -->
+<div id="infoModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body">
+            <div class="story-text" id="storyText">
+                Adam is 15 years old and runs his own online clothing store, which already shows a level of initiative most people his age don't have. He deals with the usual chaos—managing inventory, handling customer messages, figuring out why a shipment is delayed—and it teaches him more about responsibility than any school assignment ever could. Some days are exciting when orders come in, and other days feel slow and frustrating, but that's simply part of running a business. He doesn't need grand speeches about hustling 24/7; he just needs to know that showing up consistently, even on the quiet days, is what turns a small store into something solid over time.
+            </div>
+            <button id="translateStoryBtn" class="translate-btn"><i class="fas fa-language"></i> <span id="translateBtnText">Translate to Russian</span></button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
